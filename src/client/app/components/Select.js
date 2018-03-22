@@ -6,7 +6,10 @@ const Select = props => {
             <p className={`${props.selector}_p`}>
                 {props.prompt}
             </p>
-            <select className={`${props.selector}_select`} value={props.value} onChange={props.change} >
+            <select
+                className={`${props.selector}_select`}
+                value={props.value}
+                onChange={props.change} >
                 {props.options}
             </select>
         </div>
