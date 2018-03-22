@@ -1,24 +1,20 @@
 import React, { Component } from 'react'
 // containers
-import AcctInput from './container/AcctInput.container'
-import Accts from './container/Accts.container'
-import TableOptions from './container/TableOptions.container'
-import DataTable from './container/DataTable.container'
+import AcctInputContainer from './containers/AcctInputContainer'
+import AcctsContainer from './containers/AcctsContainer'
+import TableOptionsContainer from './containers/TableOptionsContainer'
+import DataTableContainer from './containers/DataTableContainer'
 
 import './styles/App.css'
 
 class App extends Component {
-    constructor(props) {
-        super(props)
-    }
-
     render() {
         return(
             <div>
-                <AcctInput />
-                <Accts />
-                <TableOptions />
-                <DataTable />
+                <AcctInputContainer />
+                <AcctsContainer />
+                <TableOptionsContainer />
+                <DataTableContainer />
             </div>
         )
     }

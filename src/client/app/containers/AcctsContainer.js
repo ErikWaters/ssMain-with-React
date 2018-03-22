@@ -1,13 +1,17 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+
 import Select from '../components/Select'
+
 import { socket } from '../store/socket'
+
 // library
 import {
     selectOptions,
     getKeys,
     isTrue
 } from '../services'
+
 // action creators
 import {
     restRes,
@@ -18,18 +22,11 @@ import {
     loadCache,
     renderTable
 } from '../store/reducers/dataTable'
+
 // action keys
 import { RESPONSE_RESTAPI } from '../store/actions/'
 
-class Accts extends Component {
-    constructor(props) {
-        super(props)
-    }
-
-    handleSelectChange(e) {
-        this.props.changeSelect(e.target.value)
-    }
-
+class AcctsContainer extends Component {
     componentWillMount() {
         socket.on(RESPONSE_RESTAPI, (data) => {
             let { acct, table } = data,
@@ -45,18 +42,21 @@ class Accts extends Component {
 
     render() {
         let numAccts = getKeys(this.props.accts).length,
-            acctsSelector = numAccts <= 1 ? "hidden" : "accts"
+        acctsSelector = numAccts <= 1 ? "hidden" : "accts"
         return(
             <div className={acctsSelector} >
                 <Select
-                selector={acctsSelector}
-                prompt="Select an Account:"
-                value={this.props.selectValue}
-                options={ selectOptions(this.props.accts) }
-                change={ this.handleSelectChange.bind(this) }
-                />
+                    selector={acctsSelector}
+                    prompt="Select an Account:"
+                    value={this.props.selectValue}
+                    options={selectOptions(this.props.accts)}
+                    change={this.handleSelectChange.bind(this)} />
             </div>
         )
+    }
+
+    handleSelectChange(e) {
+        this.props.changeSelect(e.target.value)
     }
 }
 
