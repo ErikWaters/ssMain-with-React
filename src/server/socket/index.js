@@ -28,7 +28,7 @@ let dev = option === 'dev',
   url = `${apis.rest}:${apis.devPort}${apis.request}`,
   user = creds.username,
   pass = creds.password,
-  auth = 'Basic ' + new Buffer(`${user}:${pass}`).toString('base64'),
+  auth = 'Basic ' + Buffer.from(`${user}:${pass}`).toString('base64'),
   query = 'out=json&limit=500',
   eq = `&eq_CLIENT_ID=`,
   gTables = {};
