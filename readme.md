@@ -9,8 +9,8 @@ You will need to set environmental variables to provide credentials (see /src/se
 
 ## Current State
 
-I've disabled the file management tool until I can complete it for this version
+Due to my leaving the industry and a lack of interest in utilizing this tool I'm no longer supporting it. If anyone still thinks this would be useful please contact me and I would be glad to accommodate.
 
 ## Contact Me
 
-Please send any questions / comments to me at ewaters@bpeinc.com
+Please send any questions / comments to me at erikj.waters@gmail.com
