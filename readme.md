@@ -13,4 +13,4 @@ Due to my leaving the industry and a lack of interest in utilizing this tool I'm
 
 ## Contact Me
 
-Please send any questions / comments to me at erikj.waters@gmail.com
+erikj.waters@gmail.com
